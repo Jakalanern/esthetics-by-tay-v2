@@ -1,0 +1,16 @@
+.portfolio-landing {
+  height: calc(100vh - 250px);
+  background-position: center;
+  background-repeat: no-repeat;
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),
+    url(./images/person-1.jpg);
+
+  /* if your image is too light you can use overlay to make it a bit dark */
+  background-blend-mode: overlay;
+  /* this will create the parallax effect */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+}

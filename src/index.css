@@ -1,13 +1,204 @@
-body {
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* @font-face {
+  font-family: 'Apercumono'; 
+  src: local('ApercuMonoProRegular'),
+    url('./fonts/ApercuMonoProRegular.ttf') format('truetype');
+} */
+
+*,
+*::after,
+*::before {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Raleway', sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+nav {
+  z-index: 99;
+  transition: 0.33s;
+}
+
+.landing {
+  height: calc(100vh - 250px);
+  background-position: center;
+  background-repeat: no-repeat;
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),
+    url(./images/dropper.jpg);
+
+  /* if your image is too light you can use overlay to make it a bit dark */
+  background-blend-mode: overlay;
+  /* this will create the parallax effect */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+}
+
+.carousel {
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+  max-width: 2500px;
+  box-shadow: 0 15px 15px -15px grey;
+}
+
+/* set width to be image size * image count */
+.carousel-items {
+  display: flex;
+  animation: carousel 45s linear infinite;
+  width: calc(250px * 26);
+  border-top: 2px solid white;
+}
+
+.carousel::before,
+.carousel::after {
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  content: '';
+  height: 254px;
+  position: absolute;
+  width: 250px;
+  z-index: 2;
+}
+
+@media (max-width: 500px) {
+  .carousel::before,
+  .carousel::after {
+    background: linear-gradient(
+      to right,
+      rgba(255, 255, 255, 1) 0%,
+      rgba(255, 255, 255, 0.5) 50%,
+      rgba(255, 255, 255, 0) 100%
+    );
+    width: 75px;
+  }
+}
+
+@media (min-width: 768px) {
+  .bm-burger-button {
+    display: none;
+  }
+
+  .bm-menu-wrap {
+    display: none;
+  }
+
+  .bm-cross {
+    display: none;
+  }
+}
+
+.carousel::after {
+  right: 0;
+  top: 0;
+  transform: rotateZ(180deg);
+}
+
+.carosuel::before {
+  left: 0;
+  top: 0;
+}
+
+.carousel-img {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+}
+
+/* set transform calc be -image size * 1/2 of image count */
+@keyframes carousel {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-250px * 13));
+  }
+}
+
+.services {
+  background: rgb(250, 250, 250);
+}
+
+.service-box {
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.151);
+  border: none;
+  background: rgb(255, 255, 255);
+}
+
+.service-box h1 {
+  text-align: center;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.336);
+}
+
+.bm-burger-button {
+  position: fixed;
+  width: 30px;
+  height: 20px;
+  right: 48px;
+  top: 36px;
+}
+
+.burger-bar-white {
+  background: white;
+}
+
+.burger-bar-black {
+  background: black;
+}
+
+.bm-cross {
+  background: black;
+}
+
+/*
+Sidebar wrapper styles
+Note: Beware of modifying this element as it can break the animations - you should not need to touch it in most cases
+*/
+
+.bm-menu-wrap {
+  top: 0;
+}
+
+/* General sidebar styles */
+.bm-menu {
+  background: #f7f7f7;
+  padding: 2.5em 1.5em 0;
+  font-size: 1.15em;
+  height: 100vh;
+  width: 100vw;
+}
+
+/* Morph shape necessary with bubble or elastic */
+.bm-morph-shape {
+  fill: #373a47;
+}
+
+/* Wrapper for item list */
+.bm-item-list {
+  color: black;
+  font-size: 1.5em;
+  padding: 0.5em;
+}
+
+/* Individual item */
+.bm-item {
+  font-family: 'Raleway', sans-serif;
+  display: inline-block;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+/* Styling of overlay */
+.bm-overlay {
+  display: none;
 }
