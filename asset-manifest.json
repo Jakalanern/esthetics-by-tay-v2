@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/esthetics-by-tay-v2/static/css/main.543faa41.css",
-    "main.js": "/esthetics-by-tay-v2/static/js/main.ff49eaf8.js",
+    "main.css": "/esthetics-by-tay-v2/static/css/main.35481e89.css",
+    "main.js": "/esthetics-by-tay-v2/static/js/main.d4248913.js",
     "static/media/person-1.jpg": "/esthetics-by-tay-v2/static/media/person-1.36fd2f102163e0c97f60.jpg",
     "static/media/image11.png": "/esthetics-by-tay-v2/static/media/image11.44545bf176f2483830c6.png",
     "static/media/image10.png": "/esthetics-by-tay-v2/static/media/image10.12f817e2c33a5dc28a71.png",
@@ -22,11 +22,11 @@
     "static/media/instagram (3).png": "/esthetics-by-tay-v2/static/media/instagram (3).edb90ecc706a7a25542b.png",
     "static/media/tik-tok.png": "/esthetics-by-tay-v2/static/media/tik-tok.8bb71cc6c1bd4e58530b.png",
     "index.html": "/esthetics-by-tay-v2/index.html",
-    "main.543faa41.css.map": "/esthetics-by-tay-v2/static/css/main.543faa41.css.map",
-    "main.ff49eaf8.js.map": "/esthetics-by-tay-v2/static/js/main.ff49eaf8.js.map"
+    "main.35481e89.css.map": "/esthetics-by-tay-v2/static/css/main.35481e89.css.map",
+    "main.d4248913.js.map": "/esthetics-by-tay-v2/static/js/main.d4248913.js.map"
   },
   "entrypoints": [
-    "static/css/main.543faa41.css",
-    "static/js/main.ff49eaf8.js"
+    "static/css/main.35481e89.css",
+    "static/js/main.d4248913.js"
   ]
 }
